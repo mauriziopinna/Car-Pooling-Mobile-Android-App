@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="seeBookedFAB" type="id" />
+    <item name="seeInterestedFAB" type="id" />
+    <item name="hideTripFAB" type="id" />
+    <item name="finishTripFAB" type="id" />
+</resources>

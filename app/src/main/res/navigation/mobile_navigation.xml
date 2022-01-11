@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/others_nav_trip_list">
+
+    <fragment
+        android:id="@+id/nav_trip_details"
+        android:name="com.example.goingmad.TripDetailsFragment"
+        android:label="@string/trip_details"
+        tools:layout="@layout/fragment_trip_details" >
+        <action
+            android:id="@+id/action_nav_trip_details_to_tripEditFragment"
+            app:destination="@id/nav_trip_edit"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <argument
+            android:name="tripListType"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <argument
+            android:name="tripId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_trip_details_to_bookedUsersFragment"
+            app:destination="@id/bookedUsersFragment" />
+        <action
+            android:id="@+id/action_nav_trip_details_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+        <action
+            android:id="@+id/action_nav_trip_details_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_nav_trip_details_to_nav_trip_list"
+            app:destination="@id/nav_trip_list" />
+        <action
+            android:id="@+id/action_nav_trip_details_to_nav_show_profile"
+            app:destination="@id/nav_show_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trip_edit"
+        android:name="com.example.goingmad.TripEditFragment"
+        android:label="@string/trip_edit"
+        tools:layout="@layout/fragment_trip_edit" >
+        <action
+            android:id="@+id/action_nav_trip_edit_to_nav_trip_list"
+            app:destination="@id/nav_trip_list"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"/>
+
+        <argument
+            android:name="fromDetails"
+            app:argType="integer"
+            android:defaultValue="0" />
+      <argument
+            android:name="tripSafe"
+            app:argType="com.example.goingmad.Trip"/>
+        <action
+            android:id="@+id/action_nav_trip_edit_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <argument
+            android:name="locality"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="locationReturned"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trip_list"
+        android:name="com.example.goingmad.TripListFragment"
+        android:label="@string/your_trip_list"
+        tools:layout="@layout/fragment_trip_list" >
+        <action
+            android:id="@+id/action_tripListFragment_to_nav_trip_details"
+            app:destination="@id/nav_trip_details"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_tripListFragment_to_nav_trip_edit"
+            app:destination="@id/nav_trip_edit"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_edit_profile"
+        android:name="com.example.goingmad.EditProfileFragment"
+        android:label="@string/edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_showProfileFragment"
+            app:destination="@id/nav_show_profile"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <argument
+            android:name="userSafe"
+            app:argType="com.example.goingmad.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_nav_edit_profile_to_others_nav_trip_list"
+            app:destination="@id/others_nav_trip_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_show_profile"
+        android:name="com.example.goingmad.ShowProfileFragment"
+        android:label="@string/user_profile" >
+        <action
+            android:id="@+id/action_showProfileFragment_to_editProfileFragment"
+            app:destination="@id/nav_edit_profile"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"/>
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_nav_show_profile_to_bookedUsersFragment"
+            app:destination="@id/bookedUsersFragment" />
+        <argument
+            android:name="fromBookedUsers"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_nav_show_profile_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+        <argument
+            android:name="tripId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_nav_show_profile_to_reviewListFragment"
+            app:destination="@id/reviewListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/others_nav_trip_list"
+        android:name="com.example.goingmad.OthersTripListFragment"
+        android:label="@string/all_trips">
+        <action
+            android:id="@+id/action_others_nav_trip_list_to_nav_trip_details"
+            app:destination="@id/nav_trip_details"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bookedUsersFragment"
+        android:name="com.example.goingmad.BookedUsersFragment"
+        android:label="{bookedTitle}"
+        tools:layout="@layout/fragment_booked_users">
+        <action
+            android:id="@+id/action_bookedUsersFragment_to_nav_trip_details"
+            app:destination="@id/nav_trip_details" />
+        <argument
+            android:name="tripId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookedUsersFragment_to_nav_show_profile"
+            app:destination="@id/nav_show_profile">
+            <argument
+                android:name="fromBookedUsers"
+                android:defaultValue="1" />
+        </action>
+        <argument
+            android:name="field"
+            app:argType="string" />
+        <argument
+            android:name="bookedTitle"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutFragment"
+        android:name="com.example.goingmad.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.goingmad.ReviewFragment"
+        android:label="{fragmentName}" >
+        <argument
+            android:name="fromTripDetails"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="fromShowProfile"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="tripId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="driverId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="passengerId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_reviewFragment_to_nav_show_profile"
+            app:destination="@id/nav_show_profile" >
+            <argument
+                android:name="fromBookedUsers"
+                android:defaultValue="1" />
+        </action>
+        <argument
+            android:name="reviewerName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="reviewedName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_reviewFragment_to_nav_trip_details"
+            app:destination="@id/nav_trip_details" />
+        <argument
+            android:name="fragmentName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewListFragment"
+        android:name="com.example.goingmad.ReviewListFragment"
+        android:label="{fragmentName}"
+        tools:layout="@layout/fragment_review_list" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="reviewType"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="fragmentName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trip_of_interest_list"
+        android:name="com.example.goingmad.TripsOfInterestListFragment"
+        android:label="@string/trips_of_interest_label"
+        tools:layout="@layout/fragment_trip_of_interest_list">
+        <action
+            android:id="@+id/action_tripsOfInterestListFragment_to_nav_trip_details"
+            app:destination="@id/nav_trip_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bought_trip_list"
+        android:name="com.example.goingmad.BoughtTripsListFragment"
+        android:label="@string/bought_trips_list_label"
+        tools:layout="@layout/fragment_bought_trips_list">
+        <action
+            android:id="@+id/action_nav_bought_trip_list_to_nav_trip_details"
+            app:destination="@id/nav_trip_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.goingmad.MapFragment"
+        android:label="@string/title_map" >
+        <argument
+            android:name="tripSafe"
+            app:argType="com.example.goingmad.Trip" />
+        <argument
+            android:name="localityToReturn"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_mapFragment_to_nav_trip_edit"
+            app:destination="@id/nav_trip_edit" />
+    </fragment>
+</navigation>

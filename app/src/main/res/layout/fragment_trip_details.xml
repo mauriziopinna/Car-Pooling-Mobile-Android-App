@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="2">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/CarImage"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:contentDescription="@string/profile_image"
+                android:scaleType="centerCrop"
+                android:padding="0dp"
+                tools:src="@tools:sample/avatars"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tripOwnerPicture" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tripOwnerPicture"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@id/CarImage"
+                app:layout_constraintTop_toBottomOf="@id/CarImage" />
+
+            <TextView
+                android:id="@+id/tripOwnerName"
+                style="@style/TextAppearance.MdcTypographyStyles.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@string/reviewerName"
+                app:layout_constraintBottom_toBottomOf="@+id/tripOwnerPicture"
+                app:layout_constraintStart_toEndOf="@+id/tripOwnerPicture"
+                app:layout_constraintTop_toTopOf="@+id/tripOwnerPicture" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/departureLocationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/departure_location"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                app:layout_constraintBottom_toTopOf="@+id/departureLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tripOwnerPicture" />
+
+            <TextView
+                android:id="@+id/departureLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:hint="@string/departure_location"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                app:layout_constraintBottom_toTopOf="@+id/arrivalLocationLabel"
+                app:layout_constraintTop_toBottomOf="@+id/departureLocationLabel" />
+
+            <TextView
+                android:id="@+id/arrivalLocationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/arrival_location"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                app:layout_constraintBottom_toTopOf="@+id/arrivalLocation"
+                app:layout_constraintTop_toBottomOf="@+id/departureLocation" />
+
+            <TextView
+                android:id="@+id/arrivalLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:hint="@string/arrival_location"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                app:layout_constraintBottom_toTopOf="@+id/departureTimeLabel"
+                app:layout_constraintTop_toBottomOf="@+id/arrivalLocationLabel" />
+
+            <TextView
+                android:id="@+id/departureTimeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/date_hour_departure"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                app:layout_constraintBottom_toTopOf="@+id/departureTime"
+                app:layout_constraintTop_toBottomOf="@+id/arrivalLocation" />
+
+            <TextView
+                android:id="@+id/departureTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:hint="@string/date_hour_departure"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                app:layout_constraintBottom_toTopOf="@+id/duration_price_layout"
+                app:layout_constraintTop_toBottomOf="@+id/departureTimeLabel" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/duration_price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/seatsLabel"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/duration_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/price_layout"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_weight="3.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tripDurationLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16sp"
+                        android:text="@string/trip_duration"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        app:layout_constraintBottom_toTopOf="@+id/tripDuration"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tripDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/trip_duration"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                        app:layout_constraintBottom_toTopOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tripDurationLabel" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_weight="1.5"
+                    app:layout_constraintStart_toEndOf="@+id/duration_layout"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/priceLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16sp"
+                        android:text="@string/price"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                        app:layout_constraintBottom_toTopOf="@+id/price"
+                        app:layout_constraintTop_toBottomOf="@+id/seats" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/euro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/euro"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                            app:layout_constraintBottom_toTopOf="@id/descriptionLabel"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/price"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                            app:layout_constraintBottom_toTopOf="@id/descriptionLabel"
+                            app:layout_constraintTop_toBottomOf="parent"
+                            tools:layout_editor_absoluteX="0dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/seatsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/seats"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                app:layout_constraintBottom_toTopOf="@+id/seats"
+                app:layout_constraintTop_toBottomOf="@+id/duration_price_layout"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/seats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:hint="@string/seats"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                app:layout_constraintBottom_toTopOf="@+id/additionalTrips"
+                app:layout_constraintTop_toBottomOf="@+id/seatsLabel" />
+
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/description"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                app:layout_constraintBottom_toTopOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/intermediateStopsRV"
+                tools:layout_editor_absoluteX="133dp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:hint="@string/no_additional_information"
+                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body1"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionLabel"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/additionalTrips"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/intermediate_stops"
+                app:layout_constraintBottom_toTopOf="@+id/intermediateStopsRV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seats" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/intermediateStopsRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/additionalTrips" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="370sp"
+                android:layout_height="370sp"
+                android:layout_marginTop="16sp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description">
+
+                <org.osmdroid.views.MapView
+                    android:alpha="0.5"
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/mapButton"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:backgroundTint="#00FFFFFF"
+                    app:iconTint="#000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:sdMainFabAnimationRotateAngle="0"
+        app:sdMainFabClosedSrc="@drawable/baseline_list_24"
+        android:visibility="invisible"/>
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:sdMainFabAnimationRotateAngle="0"
+        app:sdMainFabClosedSrc="@drawable/baseline_list_24"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/tripDetailsFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/book_trip"
+        android:text="@string/book_trip"
+        app:icon="@drawable/outline_time_to_leave_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

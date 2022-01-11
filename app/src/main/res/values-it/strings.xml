@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GoingMAD</string>
+    <string name="full_name_label">Nome e Cognome</string>
+    <string name="nickname_label">Nome Utente</string>
+    <string name="email_label">Indirizzo E-mail</string>
+    <string name="location_label">Posizione</string>
+    <string name="select_from_gallery">Seleziona dalla galleria</string>
+    <string name="take_picture">Scatta una foto</string>
+    <string name="car">Automobile</string>
+    <string name="birth_date">Data di Nascita</string>
+    <string name="profile_image">Immagine del Profilo</string>
+    <string name="set_profile_image">Imposta Immagine del Profilo</string>
+    <string name="not_of_age">Sei troppo piccolo!</string>
+    <string name="are_from_future">Vieni dal futuro? </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Apri navigation drawer</string>
+    <string name="navigation_drawer_close">Chiudi navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Impostazioni</string>
+
+    <string name="title_booked">Utenti Prenotati</string>
+    <string name="title_interested">Utenti Interessati</string>
+    <string name="title_DriverReviewList">Recensioni Guidatore</string>
+    <string name="title_PassengerReviewList">Recensioni Passeggero</string>
+    <string name="title_DriverReview">Recensione Guidatore</string>
+    <string name="title_PassengerReview">Recensione Passeggero</string>
+    <string name="title_map">Mappa</string>
+
+
+
+    <string name="profile_modified">Profilo utente modificato correttamente</string>
+
+    <string name="bottom_menu_owned">Offerti</string>
+    <string name="bottom_menu_booked">Prenotati</string>
+    <string name="bottom_menu_interested">Interessati</string>
+
+    <string name="departure_location">Luogo di partenza</string>
+    <string name="short_departure_location">Partenza</string>
+    <string name="arrival_location">Luogo di arrivo</string>
+    <string name="short_arrival_location">Arrivo</string>
+    <string name="departure_date">Data di partenza</string>
+    <string name="departure_time">Orario di partenza</string>
+    <string name="trip_duration">Durata viaggio stimata (ore)</string>
+    <string name="seats">Numero di posti disponibili</string>
+    <string name="price">Prezzo</string>
+    <string name="euro">€</string>
+    <string name="description">Informazioni aggiuntive</string>
+    <string name="no_description">Nessuna informazione aggiuntiva è stata fornita</string>
+    <string name= "date_hour_departure">Data e ora di partenza</string>
+    <string name="edit_button">Modifica</string>
+    <string name="accept_button">Accetta</string>
+
+    <string name="future_date">Devi selezionare una data futura</string>
+    <string name= "edit_trip">Modifica viaggio</string>
+    <string name= "save">Salva</string>
+    <string name="add_new_trip">Aggiungi nuovo viaggio</string>
+    <string name="your_trip_list">Lista dei tuoi viaggi</string>
+    <string name="all_trips">Tutti i viaggi</string>
+    <string name="user_profile">Profilo utente</string>
+    <string name="going_mad">Going Mad</string>
+    <string name="no_trips">Non ci sono viaggi disponibili</string>
+    <string name="no_booked">Non ci sono utenti prenotati</string>
+    <string name="no_interested">Non ci sono utenti interessati</string>
+    <string name="alert_image">Immagine di allerta</string>
+    <string name="trip_details">Dettagli viaggio</string>
+    <string name="trip_edit">Modifica viaggio</string>
+    <string name="edit_profile">Modifica profilo</string>
+    <string name= "no_seats_available">"Tutti i posti sono già stati prenotati"</string>
+    <string name= "user_already_booked">L\'utente è già prenotato a questo viaggio</string>
+    <string name= "already_booked">Sei già prenotato a questo viaggio</string>
+    <string name= "already_interested">Sei già interessato a questo viaggio</string>
+    <string name= "correctly_booked">Utente correttamente prenotato al viaggio</string>
+    <string name= "correctly_interested">Aggiunto alla lista degli utenti interessati al viaggio</string>
+    <string name= "something_wrong">Ops, qualcosa è andato storto!</string>
+    <string name= "trip_updated">Viaggio modificato</string>
+    <string name= "trip_added">Nuovo viaggio aggiunto</string>
+    <string name="no_additional_information">Nessuna informazione aggiuntiva</string>
+
+    <!-- Edit Profile Error Strings-->
+    <string name="no_departure">Inserisci il luogo di partenza</string>
+    <string name="no_arrival">Inserisci il luogo d\'arrivo</string>
+    <string name="no_depDate">Inserisci la data e l\'orario della partenza</string>
+    <string name="no_duration">Inserisci una stima della durata del viaggio</string>
+    <string name="no_seats">Inserire il numero di posti a sedere</string>
+    <string name="no_price">Inserire il prezzo</string>
+    <string name="file_error">Errore durante la creazione del file</string>
+
+    <string name="no_email">L\'email non è stata impostata</string>
+    <string name="no_nickname">Il nickname non è stato impostato</string>
+    <string name="no_fullname">Il nome completo non è stato impostato</string>
+    <string name="no_gender">Il genere non è stato impostato</string>
+    <string name="no_location">La posizione non è stata impostata</string>
+    <string name="no_car">La macchina non è stata impostata</string>
+    <string name="no_date_of_birth">La data di nascita non è stata impostata</string>
+    <string name="no_reviews">Non ci sono recensioni</string>
+    <string name="no_location_selected">Nessuna localitò esistente selezionata</string>
+    <string name="no_city">Città non trovata</string>
+
+    <string name="gender">Genere</string>
+    <string name="male">Maschio</string>
+    <string name="female">Femmina</string>
+    <string name="other">Altro</string>
+    <string name="no_departure_exist">Il luogo di partenza sembra non esistere</string>
+    <string name="no_arrival_exist">Il luogo di arrivo sembra non esistere</string>
+    <string name="no_intermediate_exist">Una delle fermate intermedie sembra non esistere</string>
+
+    <string name="trip_completed">Il viaggio è stato completato</string>
+    <string name="trip_already_ended">Il viaggio è già stato terminato</string>
+    <string name="trip_ended_no_delete">Il viaggio è già stato terminato, non è possibile cancellarlo</string>
+
+    <string name="show_interested_users">Utenti interessati</string>
+    <string name="show_booked_users">Utenti prenotati</string>
+
+    <string name="trips_of_interest_label">Viaggi Di Interesse</string>
+    <string name="bought_trips_list_label">Viaggi Prenotati</string>
+
+    <string name="intermediate_stops">Tappe intermedie</string>
+    <string name="add">Aggiungi</string>
+
+    <!-- Google authentication-->
+    <string name="sign_in_with_google">Autenticati con Google</string>
+    <string name="Logging_out">Disconnettendo…</string>
+
+    <string name="book_trip">Prenota</string>
+    <string name="hide_trip">Cancella viaggio</string>
+    <string name= "welcome">Benvenuto</string>
+    <string name="review">Recensisci</string>
+    <string name="confirm">Conferma</string>
+    <string name="abort">Annulla</string>
+    <string name="logout">Disconnetti</string>
+
+
+    <string name="finishTrip">Termina viaggio</string>
+
+    <string name="reviewerName">Nome recensore</string>
+
+    <string name="passengerReviewPrompt">Com\'era il passegero?</string>
+    <string name="driverReviewPrompt">Com\'era il guidatore?</string>
+    <string name="publishReview">Pubblica</string>
+    <string name="choose_from_map">Scegli dalla mappa</string>
+    <string name="driver_rating">Rating guidatore</string>
+    <string name="passenger_rating">Rating passeggero</string>
+    <string name="old_trips">Vecchi Viaggi</string>
+    <string name="to_review">Da Recensire</string>
+    <string name="to_do_trips">Prossimi</string>
+
+    <string name="pending_review">Devi recensire il guidatore</string>
+
+    <string name="search_form">Ricerca viaggi</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name= "primary">#FF03A9F4</color>
+    <color name= "onPrimary">#98C6FF</color>
+    <color name="secondary">#FFC107</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightblue">#4596F8</color>
+    <color name="lightorange">#ffcf7c</color>
+    <color name="lightbluewashed">#98C6FF</color>
+    <color name="blue">#FF004FAF</color>
+    <color name="lightred">#ff8d7c</color>
+    <color name="lightorangewashed">#FAEED9</color>
+    <color name="lightredwashed">#FFD1CA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="lightblue_500">#FF03A9F4</color>
+    <color name="lightblue_500_light_variant">#FF67daff</color>
+    <color name="lightblue_500_dark_variant">#FF007ac1</color>
+    <color name="amber_500">#FFffc107</color>
+    <color name="amber_500_light_variant">#FFfff350</color>
+    <color name="amber_500_dark_variant">#FFc79100</color>
+    <color name= "textHeader">#000000</color>
+    <color name= "background">#FFFFFF</color>
+</resources>

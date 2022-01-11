@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+        <group android:checkableBehavior="single">
+          <item
+               android:id="@+id/toDoTrips"
+                android:icon="@drawable/outline_time_to_leave_24"
+                android:title="@string/to_do_trips"/>
+            <item
+                android:id="@+id/toReviewTrips"
+                android:icon="@android:drawable/ic_menu_agenda"
+               android:title="@string/to_review" />
+            <item
+                android:id="@+id/oldTrips"
+                android:icon="@android:drawable/ic_menu_recent_history"
+               android:title="@string/old_trips" />
+        </group>
+    </menu>

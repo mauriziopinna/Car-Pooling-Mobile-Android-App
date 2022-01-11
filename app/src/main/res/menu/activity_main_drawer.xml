@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/others_nav_trip_list"
+            android:icon="@drawable/outline_time_to_leave_24"
+            android:title="@string/all_trips"/>
+        <item
+            android:id="@+id/nav_trip_list"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/your_trip_list" />
+        <item
+            android:id="@+id/nav_bought_trip_list"
+            android:icon="@drawable/outline_bookmark_border_24"
+            android:title="@string/bought_trips_list_label" />
+        <item
+            android:id="@+id/nav_trip_of_interest_list"
+            android:icon="@drawable/outline_favorite_border_24"
+            android:title="@string/trips_of_interest_label" />
+    </group>
+    <item android:title="@string/other">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_show_profile"
+                android:icon="@drawable/outline_account_circle_24"
+                android:title="@string/user_profile" />
+            <item
+                android:id="@+id/logoutFragment"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_100"
+    tools:context=".BookedUsersFragment">
+
+    <ImageView
+        android:id="@+id/alertIconBooked"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:alpha="0.35"
+        android:contentDescription="@string/alert_image"
+        android:src="@drawable/ic_menu_send"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/alertDialogIcon" />
+
+    <TextView
+        android:id="@+id/alertTextNoInterested"
+        style="@style/TextAppearance.MdcTypographyStyles.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.35"
+        android:paddingTop="8dp"
+        android:visibility="invisible"
+        android:text="@string/no_interested"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertIconBooked" />
+    <TextView
+        android:id="@+id/alertTextNoBooked"
+        style="@style/TextAppearance.MdcTypographyStyles.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.35"
+        android:paddingTop="8dp"
+        android:visibility="invisible"
+        android:text="@string/no_booked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertIconBooked" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
