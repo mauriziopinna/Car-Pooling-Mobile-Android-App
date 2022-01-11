@@ -15,6 +15,7 @@ Reviews will be then visible (Separately as driver or passenger) in each user pr
 WHAT I LEARNED:
 - How to write Android Applications written in Kotlin
 - Evaluate different possibilities for back-end solutions.
+- Deal with concurrency problems and solve them with different multithread possible solutions 
 - Use third part services such as google sign-in and maps integration
 - Integration with Mobile App and no-SQL database.
 - Differnce between writing application in native language, and frameworks like React-Native or Futter
